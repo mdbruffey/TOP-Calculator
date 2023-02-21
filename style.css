@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.calc-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.calc-display {
+    min-width: 400px;
+    min-height: 200px;
+    background-color: black;
+}
+
+.calc-input {
+    display: flex;
+}
+
+.calc-input.left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calc-buttons {
+    display: flex;
+    gap: 5px;
+}
