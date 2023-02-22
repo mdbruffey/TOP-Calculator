@@ -20,12 +20,18 @@ body {
     background: linear-gradient(145deg, rgba(2,0,36,1) 0%, rgba(86,9,121,1) 35%, rgba(178,94,219,1) 100%);
 }
 
+.header {
+    color: ivory;
+    font-family: "Orbitron";
+    font-size: 40px;
+    margin: 40px;
+}
+
 .calc-body{
     display: flex;
     flex-direction: column;
-    min-width: 200px;
-    min-height: 350px;
-    margin-top: 20px;
+    min-width: 400px;
+    min-height: 550px;
     gap: 10px;
     border: 1px solid black;
     padding: 5px;
