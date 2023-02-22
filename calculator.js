@@ -16,6 +16,9 @@ clear.addEventListener("click", clearCalc);
 const equal = document.querySelector(".equals");
 equal.addEventListener("click", calculate);
 
+const decimal = document.querySelector(".decimal");
+decimal.addEventListener("click", addDecimal);
+
 let array = [];
 var resultDisplaying = false;
 
@@ -43,14 +46,19 @@ function clearCalc(e){
 }
 
 function opUpdate(e){
-    let num = parseInt(display.textContent);
+    let num = parseFloat(display.textContent);
+    let ops = "+-×÷"
+    if (ops.includes(array[array.length-1])){
+        array[array.length-1] = this.textContent;
+        return;
+    }
     array.push(num);
     array.push(this.textContent);
     display.textContent = "0";
 }
 
 function calculate(e){
-    array.push(parseInt(display.textContent));
+    array.push(parseFloat(display.textContent));
     let result = array[0];
     for (let i = 1; i < array.length;i += 2){
         result = operate(result,array[i],array[i+1]);
@@ -61,6 +69,14 @@ function calculate(e){
     }
     display.textContent = result;
     resultDisplaying = true;
+}
+
+function addDecimal(e){
+    let string = display.textContent;
+    if(!string.includes(".")){
+        string += ".";
+    }
+    display.textContent = string;
 }
 
 function operate(num1, op, num2){
