@@ -54,8 +54,8 @@ body {
 .calc-input {
     width: 100%;
     display: flex;
-    gap: 5px;
-    flex: 1;
+    gap: 4px;
+    flex: auto;
 }
 
 .calc-input.left {
@@ -64,14 +64,14 @@ body {
     min-height: 100%;
     width: 100%;
     flex: 3;
-    gap: 5px;
+    gap: 4px;
 }
 
 .calc-input.right {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 5px;
+    gap: 4px;
 }
 
 .plus {
@@ -79,15 +79,15 @@ body {
 }
 
 .clear {
-    flex: 2;
+    flex: 2.1;
 }
 
 .equals {
-    flex: 2;
+    flex: 2.1;
 }
 
 .zero {
-    flex: 2;
+    flex: 2.1;
 }
 
 .decimal {
@@ -96,7 +96,7 @@ body {
 
 .calc-buttons {
     display: flex;
-    gap: 5px;
+    gap: 4px;
     width: 100%;
     flex: auto;
 }
@@ -106,5 +106,5 @@ body {
 }
 
 #zero {
-    flex: 2;
+    flex: 2.1;
 }
