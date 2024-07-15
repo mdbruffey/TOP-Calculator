@@ -22,13 +22,15 @@ decimal.addEventListener("click", addDecimal);
 let array = [];
 var calculating = false;
 var num_pressed = false;
+var displaying_result = false;
 
 function updateDisplay(e){
     let string = display.textContent;
     let char = this.textContent;
-    if (string === "0" || calculating){
+    if (string === "0" || calculating || displaying_result){
         string = char;
         calculating = false;
+        displaying_result = false;
     }
     else{
         string += char;
@@ -68,7 +70,7 @@ function calculate(e){
         result = "Oops :(";
     }
     display.textContent = result;
-    calculating = false;
+    displaying_result = true;
     array = []
 }
 
