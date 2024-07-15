@@ -32,6 +32,9 @@ function updateDisplay(e){
         calculating = false;
         displaying_result = false;
     }
+    else if (string.length >= 12){
+        return;
+    }
     else{
         string += char;
     }
@@ -68,6 +71,9 @@ function calculate(e){
     let result = operate(array[0],array[1],array[2]);
     if(result === null){
         result = "Oops :(";
+    }
+    if (calculating && result.toString().length >= 12){
+        result = result.toPrecision(12);
     }
     display.textContent = result;
     displaying_result = true;
