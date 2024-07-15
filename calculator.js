@@ -62,7 +62,7 @@ function opUpdate(e){
 }
 
 function calculate(e){
-    if (!num_pressed) return;
+    if (!num_pressed || displaying_result) return;
     array.push(parseFloat(display.textContent));
     console.log(array);
     let result = operate(array[0],array[1],array[2]);
